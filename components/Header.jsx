@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import { usePathname } from 'next/navigation';
 import { HiOutlineBars3, HiOutlineXMark } from 'react-icons/hi2';
 
@@ -27,8 +28,17 @@ export default function Header() {
 
           {/* Logo */}
           <div className="flex items-center">
-            {/* <img src="/images/logo.png" alt="SISIRO Logo" className="h-14 object-contain" /> */}
-          </div>
+  <Link href="/">
+    <Image
+      src="/logo/Sisiro_logo.png"
+      alt="SISIRO Logo"
+      width={240}
+      height={80}
+      priority
+      className="h-14 w-auto object-contain"
+    />
+  </Link>
+</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">

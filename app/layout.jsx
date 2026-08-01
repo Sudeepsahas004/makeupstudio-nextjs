@@ -119,8 +119,8 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={outfit.variable}>
-      <body className="bg-[#111111] font-outfit antialiased">
+    <html lang="en">
+  <body className={`${outfit.className} bg-[#272626] antialiased`}>
         <JsonLd schema={organizationSchema} />
         <JsonLd schema={websiteSchema} />
         <Header />
