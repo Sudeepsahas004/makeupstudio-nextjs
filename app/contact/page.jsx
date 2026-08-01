@@ -1,0 +1,87 @@
+import HeroBanner from '../../components/HeroBanner';
+import JsonLd from '../../components/JsonLd';
+
+export const metadata = {
+  title: 'Contact Us | SISIRO Makeup Studio',
+  description:
+    'Get in touch with SISIRO Makeup Studio in Hyderabad. Book a bridal consultation, enquire about our services, or visit us at our studio.',
+  keywords: [
+    'contact SISIRO',
+    'book makeup appointment Hyderabad',
+    'bridal makeup consultation',
+    'makeup studio Hyderabad contact',
+  ],
+  alternates: {
+    canonical: 'https://sisiro.co/contact',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://sisiro.co/contact',
+    title: 'Contact Us | SISIRO Makeup Studio',
+    description:
+      'Get in touch with SISIRO Makeup Studio in Hyderabad. Book a bridal consultation or enquire about our services.',
+    images: [
+      {
+        url: '/images/Contact-us.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contact SISIRO Makeup Studio — Hyderabad',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | SISIRO Makeup Studio',
+    description:
+      'Get in touch with SISIRO Makeup Studio in Hyderabad. Book a bridal consultation or enquire about our services.',
+    images: ['/images/Contact-us.png'],
+  },
+};
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact SISIRO Makeup Studio',
+  url: 'https://sisiro.co/contact',
+  description:
+    'Get in touch with SISIRO Makeup Studio in Hyderabad. Book a bridal consultation, enquire about our services, or visit us at our studio.',
+  image: 'https://sisiro.co/images/Contact-us.png',
+  mainEntity: {
+    '@type': 'BeautySalon',
+    name: 'SISIRO Makeup Studio',
+    url: 'https://sisiro.co',
+    telephone: '+91-XXXXXXXXXX',
+    email: 'hello@sisiro.co',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Madhapur',
+      addressLocality: 'Hyderabad',
+      addressRegion: 'Telangana',
+      postalCode: '500081',
+      addressCountry: 'IN',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '10:00',
+        closes: '20:00',
+      },
+    ],
+  },
+};
+
+export default function Contact() {
+  return (
+    <>
+      <JsonLd schema={contactSchema} />
+      <HeroBanner
+        image="/images/Contact-us.png"
+        subtitle="Contact Us"
+        title="Let's Make Your Special Day Beautiful"
+        description="Book an appointment or contact us for consultations."
+        buttonText="Contact Now"
+      />
+    </>
+  );
+}
