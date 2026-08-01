@@ -1,39 +1,26 @@
 import HeroBanner from '../../components/HeroBanner';
 import JsonLd from '../../components/JsonLd';
 
+const BASE_URL = 'https://makeupstudio-nextjs.vercel.app';
+
 export const metadata = {
   title: 'About Us | SISIRO Makeup Studio',
   description:
     "Meet the team behind SISIRO — Hyderabad's luxury bridal makeup studio. Years of artistry, personalised care, and a passion for making every client feel their most beautiful.",
-  keywords: [
-    'about SISIRO',
-    'makeup artist Hyderabad',
-    'luxury beauty studio',
-    'bridal makeup team Hyderabad',
-  ],
-  alternates: {
-    canonical: 'https://sisiro.co/about',
-  },
+  keywords: ['about SISIRO', 'makeup artist Hyderabad', 'luxury beauty studio', 'bridal makeup team Hyderabad'],
+  alternates: { canonical: `${BASE_URL}/about` },
   openGraph: {
     type: 'website',
-    url: 'https://sisiro.co/about',
+    url: `${BASE_URL}/about`,
     title: 'About Us | SISIRO Makeup Studio',
     description:
       "Meet the team behind SISIRO — Hyderabad's luxury bridal makeup studio. Years of artistry, personalised care, and a passion for making every client feel their most beautiful.",
-    images: [
-      {
-        url: '/images/About.png',
-        width: 1200,
-        height: 630,
-        alt: 'About SISIRO Makeup Studio — Hyderabad',
-      },
-    ],
+    images: [{ url: '/images/About.png', width: 1200, height: 630, alt: 'About SISIRO Makeup Studio — Hyderabad' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Us | SISIRO Makeup Studio',
-    description:
-      "Meet the team behind SISIRO — Hyderabad's luxury bridal makeup studio.",
+    description: "Meet the team behind SISIRO — Hyderabad's luxury bridal makeup studio.",
     images: ['/images/About.png'],
   },
 };
@@ -42,17 +29,16 @@ const aboutSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About SISIRO Makeup Studio',
-  url: 'https://sisiro.co/about',
+  url: `${BASE_URL}/about`,
   description:
     "Meet the team behind SISIRO — Hyderabad's luxury bridal makeup studio. Years of artistry, personalised care, and a passion for making every client feel their most beautiful.",
-  image: 'https://sisiro.co/images/About.png',
+  image: `${BASE_URL}/images/About.png`,
   mainEntity: {
     '@type': 'BeautySalon',
     name: 'SISIRO Makeup Studio',
-    url: 'https://sisiro.co',
-    image: 'https://sisiro.co/images/About.png',
-    description:
-      'Luxury bridal makeup studio and professional beauty academy in Hyderabad.',
+    url: BASE_URL,
+    image: `${BASE_URL}/images/About.png`,
+    description: 'Luxury bridal makeup studio and professional beauty academy in Hyderabad.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Madhapur',

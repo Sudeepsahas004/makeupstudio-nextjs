@@ -1,40 +1,24 @@
 import JsonLd from '../../components/JsonLd';
 
+const BASE_URL = 'https://makeupstudio-nextjs.vercel.app';
+
 export const metadata = {
   title: 'Makeup Academy in Hyderabad | SISIRO',
   description:
     'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses in bridal makeup, self-grooming, corporate grooming, and advanced techniques for all skill levels.',
-  keywords: [
-    'makeup academy Hyderabad',
-    'makeup courses Hyderabad',
-    'professional makeup training',
-    'bridal makeup course Madhapur',
-    'SISIRO academy',
-    'beauty school Hyderabad',
-  ],
-  alternates: {
-    canonical: 'https://sisiro.co/academy',
-  },
+  keywords: ['makeup academy Hyderabad', 'makeup courses Hyderabad', 'professional makeup training', 'bridal makeup course Madhapur', 'SISIRO academy', 'beauty school Hyderabad'],
+  alternates: { canonical: `${BASE_URL}/academy` },
   openGraph: {
     type: 'website',
-    url: 'https://sisiro.co/academy',
+    url: `${BASE_URL}/academy`,
     title: 'Makeup Academy in Hyderabad | SISIRO',
-    description:
-      'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses in bridal makeup, self-grooming, corporate grooming, and advanced techniques for all skill levels.',
-    images: [
-      {
-        url: '/images/Academy.png',
-        width: 1200,
-        height: 630,
-        alt: 'SISIRO Makeup Academy — Hyderabad',
-      },
-    ],
+    description: 'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses in bridal makeup, self-grooming, corporate grooming, and advanced techniques for all skill levels.',
+    images: [{ url: '/images/Academy.png', width: 1200, height: 630, alt: 'SISIRO Makeup Academy — Hyderabad' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Makeup Academy in Hyderabad | SISIRO',
-    description:
-      'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses for all skill levels.',
+    description: 'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses for all skill levels.',
     images: ['/images/Academy.png'],
   },
 };
@@ -43,10 +27,9 @@ const academySchema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
   name: 'SISIRO Makeup Academy',
-  description:
-    'Professional makeup academy in Hyderabad offering courses in bridal makeup, self-grooming, corporate grooming, and advanced makeup techniques for all skill levels.',
-  url: 'https://sisiro.co/academy',
-  image: 'https://sisiro.co/images/Academy.png',
+  description: 'Professional makeup academy in Hyderabad offering courses in bridal makeup, self-grooming, corporate grooming, and advanced makeup techniques for all skill levels.',
+  url: `${BASE_URL}/academy`,
+  image: `${BASE_URL}/images/Academy.png`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Madhapur',
@@ -55,11 +38,7 @@ const academySchema = {
     postalCode: '500081',
     addressCountry: 'IN',
   },
-  parentOrganization: {
-    '@type': 'BeautySalon',
-    name: 'SISIRO Makeup Studio',
-    url: 'https://sisiro.co',
-  },
+  parentOrganization: { '@type': 'BeautySalon', name: 'SISIRO Makeup Studio', url: BASE_URL },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Makeup Courses',
@@ -71,7 +50,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P2W',
         educationalLevel: 'Beginner',
-        url: 'https://sisiro.co/makeup-course-in-madhapur/',
+        url: `${BASE_URL}/academy`,
       },
       {
         '@type': 'Course',
@@ -80,7 +59,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P4W',
         educationalLevel: 'Beginner',
-        url: 'https://sisiro.co/basic-hair-course-in-madhapur/',
+        url: `${BASE_URL}/academy`,
       },
       {
         '@type': 'Course',
@@ -89,7 +68,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P8W',
         educationalLevel: 'Advanced',
-        url: 'https://sisiro.co/advanced-hair-course-in-hyderabad/',
+        url: `${BASE_URL}/academy`,
       },
     ],
   },

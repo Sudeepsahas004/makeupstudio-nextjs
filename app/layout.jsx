@@ -10,14 +10,16 @@ const outfit = Outfit({
   display: 'swap',
 });
 
+const BASE_URL = 'https://makeupstudio-nextjs.vercel.app';
+
 export const metadata = {
-  metadataBase: new URL('https://sisiro.co'),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
     template: '%s | SISIRO Makeup Studio',
   },
   description:
-    'SISIRO is Hyderabad\'s premier luxury bridal makeup studio and beauty academy. Expert makeup artists for weddings, receptions, and all special occasions.',
+    "SISIRO is Hyderabad's premier luxury bridal makeup studio and beauty academy. Expert makeup artists for weddings, receptions, and all special occasions.",
   keywords: [
     'bridal makeup Hyderabad',
     'luxury makeup studio Hyderabad',
@@ -27,7 +29,7 @@ export const metadata = {
     'bridal beauty Hyderabad',
     'professional makeup artist',
   ],
-  authors: [{ name: 'SISIRO Makeup Studio', url: 'https://sisiro.co' }],
+  authors: [{ name: 'SISIRO Makeup Studio', url: BASE_URL }],
   creator: 'SISIRO Makeup Studio',
   publisher: 'SISIRO Makeup Studio',
   formatDetection: {
@@ -41,11 +43,11 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://sisiro.co',
+    url: BASE_URL,
     siteName: 'SISIRO Makeup Studio',
     title: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
     description:
-      'SISIRO is Hyderabad\'s premier luxury bridal makeup studio and beauty academy. Expert makeup artists for weddings, receptions, and all special occasions.',
+      "SISIRO is Hyderabad's premier luxury bridal makeup studio and beauty academy. Expert makeup artists for weddings, receptions, and all special occasions.",
     images: [
       {
         url: '/images/Bridal.jpg',
@@ -61,7 +63,7 @@ export const metadata = {
     creator: '@sisiro_makeup',
     title: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
     description:
-      'SISIRO is Hyderabad\'s premier luxury bridal makeup studio and beauty academy.',
+      "SISIRO is Hyderabad's premier luxury bridal makeup studio and beauty academy.",
     images: ['/images/Bridal.jpg'],
   },
   robots: {
@@ -75,7 +77,10 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://sisiro.co',
+    canonical: BASE_URL,
+  },
+  verification: {
+    google: 'google56827e20951fe5d4',
   },
 };
 
@@ -84,8 +89,8 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'SISIRO Makeup Studio',
-    url: 'https://sisiro.co',
-    logo: 'https://sisiro.co/favicon.ico',
+    url: BASE_URL,
+    logo: `${BASE_URL}/favicon.ico`,
     sameAs: [
       'https://www.instagram.com/sisiro_makeup/',
       'https://www.facebook.com/sisiromakeup/',
@@ -102,12 +107,12 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'SISIRO Makeup Studio',
-    url: 'https://sisiro.co',
+    url: BASE_URL,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://sisiro.co/?s={search_term_string}',
+        urlTemplate: `${BASE_URL}/?s={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },

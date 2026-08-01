@@ -1,13 +1,9 @@
 /**
  * app/sitemap.js
  * Next.js automatically serves this as /sitemap.xml
- * Spec: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
  */
 
-const BASE_URL = 'https://sisiro.co';
-
-// Use a fixed date so the build output is stable.
-// Update this manually whenever content on a page meaningfully changes.
+const BASE_URL = 'https://makeupstudio-nextjs.vercel.app';
 const LAST_MODIFIED = '2026-08-01';
 
 export default function sitemap() {

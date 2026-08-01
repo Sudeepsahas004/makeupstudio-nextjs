@@ -1,6 +1,8 @@
 import HomeHero from '../components/HomeHero/HomeHero';
 import JsonLd from '../components/JsonLd';
 
+const BASE_URL = 'https://makeupstudio-nextjs.vercel.app';
+
 export const metadata = {
   title: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
   description:
@@ -12,29 +14,19 @@ export const metadata = {
     'SISIRO makeup studio',
     'beauty services Hyderabad',
   ],
-  alternates: {
-    canonical: 'https://sisiro.co',
-  },
+  alternates: { canonical: BASE_URL },
   openGraph: {
     type: 'website',
-    url: 'https://sisiro.co',
+    url: BASE_URL,
     title: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
     description:
       'SISIRO offers luxury bridal makeup and personalised beauty services in Hyderabad. Flawless looks for weddings, receptions, and every special occasion.',
-    images: [
-      {
-        url: '/images/Bridal.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SISIRO Makeup Studio — Luxury Bridal Makeup Hyderabad',
-      },
-    ],
+    images: [{ url: '/images/Bridal.jpg', width: 1200, height: 630, alt: 'SISIRO Makeup Studio — Luxury Bridal Makeup Hyderabad' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'SISIRO Makeup Studio | Luxury Bridal Makeup in Hyderabad',
-    description:
-      'SISIRO offers luxury bridal makeup and personalised beauty services in Hyderabad.',
+    description: 'SISIRO offers luxury bridal makeup and personalised beauty services in Hyderabad.',
     images: ['/images/Bridal.jpg'],
   },
 };
@@ -45,8 +37,8 @@ const homeSchema = {
   name: 'SISIRO Makeup Studio',
   description:
     'Luxury bridal makeup studio and professional beauty academy in Hyderabad offering personalised makeup services for weddings, receptions, and all special occasions.',
-  url: 'https://sisiro.co',
-  image: 'https://sisiro.co/images/Bridal.jpg',
+  url: BASE_URL,
+  image: `${BASE_URL}/images/Bridal.jpg`,
   telephone: '+91-XXXXXXXXXX',
   priceRange: '₹₹₹',
   address: {
@@ -78,22 +70,8 @@ const homeSchema = {
     '@type': 'OfferCatalog',
     name: 'Makeup Services',
     itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Bridal Makeup',
-          url: 'https://sisiro.co/bridal',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Makeup Academy',
-          url: 'https://sisiro.co/academy',
-        },
-      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bridal Makeup', url: `${BASE_URL}/bridal` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Makeup Academy', url: `${BASE_URL}/academy` } },
     ],
   },
 };
@@ -103,12 +81,6 @@ export default function Home() {
     <>
       <JsonLd schema={homeSchema} />
       <HomeHero />
-      {/* Other Home Sections */}
-      {/* Services */}
-      {/* Why Choose Us */}
-      {/* Gallery Preview */}
-      {/* Testimonials */}
-      {/* Contact CTA */}
     </>
   );
 }
