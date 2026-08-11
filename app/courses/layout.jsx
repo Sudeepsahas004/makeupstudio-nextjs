@@ -7,10 +7,10 @@ export const metadata = {
   description:
     'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses in bridal makeup, self-grooming, corporate grooming, and advanced techniques for all skill levels.',
   keywords: ['makeup academy Hyderabad', 'makeup courses Hyderabad', 'professional makeup training', 'bridal makeup course Madhapur', 'SISIRO academy', 'beauty school Hyderabad'],
-  alternates: { canonical: `${BASE_URL}/academy` },
+  alternates: { canonical: `${BASE_URL}/courses` },
   openGraph: {
     type: 'website',
-    url: `${BASE_URL}/academy`,
+    url: `${BASE_URL}/courses`,
     title: 'Makeup Academy in Hyderabad | SISIRO',
     description: 'Learn professional makeup artistry at SISIRO Academy in Hyderabad. Courses in bridal makeup, self-grooming, corporate grooming, and advanced techniques for all skill levels.',
     images: [{ url: '/images/Academy.png', width: 1200, height: 630, alt: 'SISIRO Makeup Academy — Hyderabad' }],
@@ -28,7 +28,7 @@ const academySchema = {
   '@type': 'EducationalOrganization',
   name: 'SISIRO Makeup Academy',
   description: 'Professional makeup academy in Hyderabad offering courses in bridal makeup, self-grooming, corporate grooming, and advanced makeup techniques for all skill levels.',
-  url: `${BASE_URL}/academy`,
+  url: `${BASE_URL}/courses`,
   image: `${BASE_URL}/images/Academy.png`,
   address: {
     '@type': 'PostalAddress',
@@ -50,7 +50,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P2W',
         educationalLevel: 'Beginner',
-        url: `${BASE_URL}/academy`,
+        url: `${BASE_URL}/courses`,
       },
       {
         '@type': 'Course',
@@ -59,7 +59,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P4W',
         educationalLevel: 'Beginner',
-        url: `${BASE_URL}/academy`,
+        url: `${BASE_URL}/courses`,
       },
       {
         '@type': 'Course',
@@ -68,7 +68,7 @@ const academySchema = {
         provider: { '@type': 'EducationalOrganization', name: 'SISIRO Makeup Academy' },
         timeRequired: 'P8W',
         educationalLevel: 'Advanced',
-        url: `${BASE_URL}/academy`,
+        url: `${BASE_URL}/courses`,
       },
     ],
   },

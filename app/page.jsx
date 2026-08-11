@@ -71,7 +71,7 @@ const homeSchema = {
     name: 'Makeup Services',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bridal Makeup', url: `${BASE_URL}/bridal` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Makeup Academy', url: `${BASE_URL}/academy` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Makeup Academy', url: `${BASE_URL}/courses` } },
     ],
   },
 };

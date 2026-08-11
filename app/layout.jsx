@@ -2,6 +2,7 @@ import { Outfit } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header';
 import JsonLd from '../components/JsonLd';
+import LayoutClient from "../components/LayoutClient";
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -123,8 +124,12 @@ export default function RootLayout({ children }) {
   <body className={`${outfit.className} bg-[#272626] antialiased`}>
         <JsonLd schema={organizationSchema} />
         <JsonLd schema={websiteSchema} />
-        <Header />
-        <main>{children}</main>
+         <Header />
+
+  <LayoutClient>
+    <main>{children}</main>
+  </LayoutClient>
+          
       </body>
     </html>
   );

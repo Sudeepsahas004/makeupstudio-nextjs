@@ -5,3 +5,137 @@
 body {
   font-family: 'Outfit', sans-serif;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.heart{
+    position:absolute;
+    color:#D4AF37;
+    transform-origin:center;
+}
+
+/* Main heart */
+
+.front{
+    font-size:32px;
+    z-index:3;
+    animation:heartFront 4s infinite ease-in-out;
+}
+
+/* Second heart */
+
+.middle{
+    font-size:32px;
+    opacity:.28;
+    z-index:2;
+    animation:heartMiddle 4s infinite ease-in-out;
+}
+
+/* Third heart */
+
+.back{
+    font-size:32px;
+    opacity:.12;
+    z-index:1;
+    animation:heartBack 4s infinite ease-in-out;
+}
+
+@keyframes heartFront{
+
+0%,72%,100%{
+transform:scale(1);
+}
+
+78%{
+transform:scale(1.12);
+}
+
+84%{
+transform:scale(1);
+}
+
+90%{
+transform:scale(1.10);
+}
+
+96%{
+transform:scale(1);
+}
+
+}
+
+@keyframes heartMiddle{
+
+0%,72%,100%{
+transform:scale(1);
+opacity:.28;
+}
+
+78%{
+transform:scale(1.30);
+opacity:.18;
+}
+
+92%{
+transform:scale(1.45);
+opacity:0;
+}
+
+}
+
+@keyframes heartBack{
+
+0%,72%,100%{
+transform:scale(1);
+opacity:.12;
+}
+
+78%{
+transform:scale(1.55);
+opacity:.08;
+}
+
+92%{
+transform:scale(1.75);
+opacity:0;
+}
+
+}
+
+.front,
+.middle,
+.back{
+    font-size:22px;
+}
+
+@media (min-width:640px){
+    .front,
+    .middle,
+    .back{
+        font-size:28px;
+    }
+}
+
+@media (min-width:1024px){
+    .front,
+    .middle,
+    .back{
+        font-size:32px;
+    }
+}

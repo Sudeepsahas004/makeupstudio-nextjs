@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Sitemap | SISIRO Makeup Studio',
   description: 'All pages on SISIRO Makeup Studio — bridal makeup, academy, gallery, testimonials, and more.',
   alternates: {
-    canonical: 'https://sisiro.co/sitemap',
+    canonical: 'https://makeupstudio-nextjs.vercel.app/sitemap',
   },
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata = {
 const pages = [
   { label: 'Home',                href: '/' },
   { label: 'Bridal Makeup',       href: '/bridal' },
-  { label: 'Academy',             href: '/academy' },
+  { label: 'Academy',             href: '/courses' },
   { label: 'Gallery',             href: '/gallery' },
   { label: 'Testimonials',        href: '/testimonials' },
   { label: 'About Us',            href: '/about' },
