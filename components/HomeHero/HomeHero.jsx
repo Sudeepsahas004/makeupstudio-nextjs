@@ -10,7 +10,6 @@ export default function HomeHero() {
           <HeroCarousel />
         </div>
 
-        {/* Content — bottom on mobile, left on desktop */}
         <div className="order-2 lg:order-1">
           <HeroContent />
         </div>
