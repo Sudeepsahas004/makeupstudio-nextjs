@@ -32,10 +32,10 @@ export default function Header() {
               <Image
                 src="/logo/Sisiro_logo.png"
                 alt="SISIRO Logo"
-                width={240}
-                height={80}
+                width={280}
+                height={100}
                 priority
-                className="h-14 w-auto object-contain"
+                className="h-[64px] w-auto object-contain"
               />
             </Link>
           </div>
@@ -59,12 +59,12 @@ export default function Header() {
 
           {/* Book Appointment */}
           <div className="hidden lg:block">
-            <Link
+            {/* <Link
               href="/form"
               className="px-6 py-3 border border-[#D4AF37] rounded-md text-[#D4AF37] uppercase text-sm font-semibold tracking-wider hover:bg-[#D4AF37] hover:text-black transition duration-300"
             >
               Enquire
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Hamburger */}

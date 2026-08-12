@@ -18,7 +18,7 @@ export default function HeroCarousel() {
   const [loadedImages, setLoadedImages] = useState({});
 
   return (
-    <div className="w-[400px] h-[480px] my-3 md:my-6 sm:h-[400px] lg:h-[550px] rounded-[5px] overflow-hidden shadow-xl border-[4px] border-[#464444]">
+    <div className="w-[400px] h-[480px] my-3 md:my-6 sm:h-[400px] lg:h-[580px] rounded-[5px] overflow-hidden shadow-xl border-[4px] border-[#464444]">
       <Swiper
         modules={[Autoplay, EffectFade]}
         slidesPerView={1}

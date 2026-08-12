@@ -1,40 +1,50 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 const galleryData = [
-  { id: 1,  category: 'Bridal',    image: '/images/Gallery/Gallery-1.png' },
-  { id: 2,  category: 'Bridal',    image: '/images/Gallery/Gallery-2.png' },
-  { id: 3,  category: 'Reception', image: '/images/Gallery/Gallery-3.png' },
-  { id: 4,  category: 'Reception', image: '/images/Gallery/Gallery-4.png' },
-  { id: 5,  category: 'Engagement',image: '/images/Gallery/Gallery-5.png' },
-  { id: 6,  category: 'Celebrity', image: '/images/Gallery/Gallery-6.png' },
-  { id: 7,  category: 'HD Makeup', image: '/images/Gallery/Gallery-7.png' },
-  { id: 8,  category: 'Bridal',    image: '/images/Gallery/Gallery-8.png' },
-  { id: 9,  category: 'Celebrity', image: '/images/Gallery/Gallery-9.png' },
-  { id: 10, category: 'Bridal',    image: '/images/Bridal-Image1.jpg' },
-  { id: 11, category: 'Bridal',    image: '/images/Bridal-Image2.jpg' },
-  { id: 12, category: 'Bridal',    image: '/images/Bridal-Image3.jpg' },
+  { id: 1, category: "Bridal", image: "/images/Gallery/Gallery-1.png" },
+  { id: 2, category: "Bridal", image: "/images/Gallery/Gallery-2.png" },
+  { id: 3, category: "Reception", image: "/images/Gallery/Gallery-3.png" },
+  { id: 4, category: "Reception", image: "/images/Gallery/Gallery-4.png" },
+  { id: 5, category: "Engagement", image: "/images/Gallery/Gallery-5.png" },
+  { id: 6, category: "Celebrity", image: "/images/Gallery/Gallery-6.png" },
+  { id: 7, category: "HD Makeup", image: "/images/Gallery/Gallery-7.png" },
+  { id: 8, category: "Bridal", image: "/images/Gallery/Gallery-8.png" },
+  // { id: 9,  category: 'Celebrity', image: '/images/Gallery/Gallery-9.png' },
+  { id: 10, category: "Bridal", image: "/images/Bridal-Image1.jpg" },
+  { id: 11, category: "Bridal", image: "/images/Bridal-Image2.jpg" },
+  { id: 12, category: "Bridal", image: "/images/Bridal-Image3.jpg" },
 ];
 
-const categories = ['All', 'Bridal', 'Reception', 'Engagement', 'HD Makeup', 'Celebrity'];
+const categories = [
+  "All",
+  "Bridal",
+  "Reception",
+  "Engagement",
+  "HD Makeup",
+  "Celebrity",
+];
 
 const IMAGES_PER_PAGE = 9;
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [loadedImages, setLoadedImages] = useState({});
 
   const filtered =
-    activeCategory === 'All'
+    activeCategory === "All"
       ? galleryData
       : galleryData.filter((item) => item.category === activeCategory);
 
   const totalPages = Math.ceil(filtered.length / IMAGES_PER_PAGE);
   const startIndex = (currentPage - 1) * IMAGES_PER_PAGE;
-  const currentImages = filtered.slice(startIndex, startIndex + IMAGES_PER_PAGE);
+  const currentImages = filtered.slice(
+    startIndex,
+    startIndex + IMAGES_PER_PAGE,
+  );
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
@@ -44,7 +54,6 @@ export default function Gallery() {
   return (
     <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="uppercase tracking-[4px] text-[#D4AF37] text-sm font-semibold mb-3">
@@ -62,27 +71,27 @@ export default function Gallery() {
               key={`${item.id}-${index}`}
               className="max-w-sm mx-auto bg-[#2E2E2E] rounded-lg overflow-hidden shadow-lg transition duration-300 hover:scale-105"
             >
-             <div className="relative w-full h-[500px] overflow-hidden">
-  {!loadedImages[item.image] && (
-    <div className="absolute inset-0 animate-pulse bg-gray-700" />
-  )}
+              <div className="relative w-full h-[550px] overflow-hidden">
+                {!loadedImages[item.image] && (
+                  <div className="absolute inset-0 animate-pulse bg-gray-700" />
+                )}
 
-  <Image
-    src={item.image}
-    alt={item.category}
-    width={400}
-    height={500}
-    className={`w-full h-full object-cover transition-opacity duration-500 ${
-      loadedImages[item.image] ? "opacity-100" : "opacity-0"
-    }`}
-    onLoad={() =>
-      setLoadedImages((prev) => ({
-        ...prev,
-        [item.image]: true,
-      }))
-    }
-  />
-</div>
+                <Image
+                  src={item.image}
+                  alt={item.category}
+                  width={400}
+                  height={500}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${
+                    loadedImages[item.image] ? "opacity-100" : "opacity-0"
+                  }`}
+                  onLoad={() =>
+                    setLoadedImages((prev) => ({
+                      ...prev,
+                      [item.image]: true,
+                    }))
+                  }
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -103,8 +112,8 @@ export default function Gallery() {
               onClick={() => setCurrentPage(index + 1)}
               className={`w-10 h-10 rounded ${
                 currentPage === index + 1
-                  ? 'bg-[#D4AF37] text-black'
-                  : 'bg-[#2E2E2E] text-white'
+                  ? "bg-[#D4AF37] text-black"
+                  : "bg-[#2E2E2E] text-white"
               }`}
             >
               {index + 1}
