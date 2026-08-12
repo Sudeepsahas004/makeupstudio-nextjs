@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 const images = [
-  { src: '/images/Gallery-2.png', alt: 'Gallery slide 1' },
+  { src: '/images/Gallery/Gallery-2.png', alt: 'Gallery slide 1' },
   { src: '/images/Hero-Home-mkup.png', alt: 'Hero slide 2' },
   { src: '/images/Makeup-room.jpeg', alt: 'Makeup room slide 3' },
 ];
