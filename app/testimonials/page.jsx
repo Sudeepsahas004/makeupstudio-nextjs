@@ -161,7 +161,7 @@ export default function Testimonials() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="mt-24 bg-[#111111] rounded-3xl px-8 py-16 text-center">
+      {/* <div className="mt-24 bg-[#111111] rounded-3xl px-8 py-16 text-center">
         <span className="uppercase tracking-[4px] text-[#D4AF37] text-sm font-semibold">
           JOIN OUR HAPPY CLIENTS
         </span>
@@ -180,7 +180,7 @@ export default function Testimonials() {
             Explore Academy
           </button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

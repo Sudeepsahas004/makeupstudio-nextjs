@@ -7,12 +7,12 @@ export default function BridalHero() {
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 w-full">
 
         {/* Carousel — top on mobile, right on desktop */}
-        <div className="order-1 lg:order-2 flex justify-center items-center lg:-translate-x-8">
+        <div className="order-1 lg:order-2 flex justify-center items-center lg:-translate-x-16">
           <BridalCarousel />
         </div>
 
         {/* Content — bottom on mobile, left on desktop */}
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 ">
           <BridalContent />
         </div>
       </div>

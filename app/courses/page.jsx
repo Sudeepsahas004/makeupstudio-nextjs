@@ -52,7 +52,7 @@ export default function Academy() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="uppercase tracking-[4px] text-[#D4AF37] text-sm font-semibold mb-3">
-            SISIRO ACADEMY
+            SISRO'S ACADEMY
           </p>
           <h1 className="text-4xl sm:text-4xl font-bold text-[#F8F8F8] leading-tight">
             Courses offered
@@ -95,7 +95,7 @@ export default function Academy() {
         </div>
 
         {/* Highlight Banner */}
-        <div className="mt-20 bg-[#111111] rounded-3xl px-8 py-10 text-center shadow-xl">
+        {/* <div className="mt-20 bg-[#111111] rounded-3xl px-8 py-10 text-center shadow-xl">
           <span className="uppercase tracking-[4px] text-[#D4AF37] text-sm font-semibold">
             SISIRO ACADEMY
           </span>
@@ -105,7 +105,7 @@ export default function Academy() {
             exclusively tailored for you to educate and elevate the overall
             experience.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

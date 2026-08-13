@@ -9,7 +9,7 @@ export default function EnquiryButton({ onClick }) {
       className="
         fixed
         bottom-8
-        right-8
+        right-10
         z-50
         flex
         flex-col
@@ -19,7 +19,7 @@ export default function EnquiryButton({ onClick }) {
     >
 
       {/* Desktop Social Buttons */}
-       <div className="hidden lg:block fixed bottom-[140px] right-8 z-50">
+       <div className="hidden lg:block fixed bottom-[140px] right-9 z-50">
         <SocialButtons />
       </div>
 
@@ -28,7 +28,7 @@ export default function EnquiryButton({ onClick }) {
       className="
    fixed
     bottom-8
-    right-8
+    right-9
     z-50
 
     w-24
