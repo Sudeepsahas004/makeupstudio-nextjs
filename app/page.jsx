@@ -8,6 +8,9 @@ export const metadata = {
   description:
     'SISIRO offers luxury bridal makeup and personalised beauty services in Hyderabad. Flawless looks for weddings, receptions, and every special occasion.',
   keywords: [
+    'best makeup studio Hyderabad',
+    'makeupstudio hyderabad',
+    'best makeup artist',
     'bridal makeup Hyderabad',
     'luxury makeup studio',
     'wedding makeup artist',
